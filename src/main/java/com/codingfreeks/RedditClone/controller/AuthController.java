@@ -1,5 +1,7 @@
 package com.codingfreeks.RedditClone.controller;
 
+import com.codingfreeks.RedditClone.dto.AuthenticationResponse;
+import com.codingfreeks.RedditClone.dto.LoginRequest;
 import com.codingfreeks.RedditClone.dto.RegisterRequest;
 import com.codingfreeks.RedditClone.service.AuthService;
 import lombok.AllArgsConstructor;
@@ -27,4 +29,8 @@ public class AuthController {
         return new ResponseEntity<>("User Account verification done successfully", HttpStatus.OK);
     }
 
+    @PostMapping("/login")
+    public AuthenticationResponse login(@RequestBody LoginRequest loginRequest) {
+        return authService.login(loginRequest);
+    }
 }
