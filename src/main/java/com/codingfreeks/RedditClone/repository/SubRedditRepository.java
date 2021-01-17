@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SubRedditRepository extends JpaRepository<SubReddit, Long> {
+   public SubReddit findByName(String name);
 }

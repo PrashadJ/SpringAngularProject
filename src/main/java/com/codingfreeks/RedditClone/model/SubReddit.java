@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -30,7 +31,10 @@ public class SubReddit {
     @OneToMany(fetch = FetchType.LAZY)
     private List<Post> posts;
 
-    private Instant createdDate;
+    //created_date timestamp NULL,
+    @CreatedDate
+    @Column(columnDefinition = "timestamp default now()")
+    private Instant createdDate=Instant.now();
 
     @ManyToOne(fetch = FetchType.LAZY)
     private UserD user;
