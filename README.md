@@ -25,4 +25,24 @@ features which were built while implementing this project.
    ![img_3.png](img_3.png)
    similarly we can retrieve the created post from the ID associated with that post
    ![img_4.png](img_4.png)
+  
+5. Adding a comment: 
+   endpoint: `{POST}api/comments`
+   A user can add a comment on a post using the the "postid" in the req payload: 
+   ![img_5.png](img_5.png)
    
+6. Similarly all the comments added on a post can be retrieved: 
+   endpoint: `api/comments/by-post/3`
+   ![img_6.png](img_6.png)
+   
+7. Any POST created can be upvoted or downvoted: 
+   endpoint: `{POST}api/votes/`
+   ![img_7.png](img_7.png)
+   and the endpoint `{GET}api/posts/` can be used to fetch all the votecount which is the summation of downvotes
+   and upvotes made on any post.
+   
+That is it, this was the backend APIs required for building a reddit application.
+Do let me know if you feel there can be any additions to this implementation.
+
+Thanks,
+Prashad
