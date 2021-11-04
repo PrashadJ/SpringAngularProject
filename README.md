@@ -38,6 +38,7 @@ features which were built while implementing this project.
 7. Any POST created can be upvoted or downvoted: 
    endpoint: `{POST}api/votes/`
    ![img_7.png](img_7.png)
+   
    and the endpoint `{GET}api/posts/` can be used to fetch all the votecount which is the summation of downvotes
    and upvotes made on any post.
    
