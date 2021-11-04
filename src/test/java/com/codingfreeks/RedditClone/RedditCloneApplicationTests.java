@@ -8,6 +8,12 @@ class RedditCloneApplicationTests {
 
 	@Test
 	void contextLoads() {
+//
+//		Comment.CommentBuilder com = Comment.builder();
+//		com.cratedDate(Instant.now()).
+//				text("commentsDto.getText()");
+//		System.out.println(com.build());
+
 	}
 
 }
