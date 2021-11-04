@@ -7,6 +7,7 @@ features which were built while implementing this project.
    endpoint: `api/auth/signup`
    This will consume the user details required for signup i.e the username, email and password. After the user details
    are entered, it will create a user in the database with an encoded password.
+   
    ![img.png](img.png)
 
 2. User login and user authentication using JWT:
